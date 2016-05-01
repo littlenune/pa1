@@ -1,0 +1,8 @@
+ิbin/
+build/
+*.class
+*.tmp
+.settings/
+.project
+.classpath
+
