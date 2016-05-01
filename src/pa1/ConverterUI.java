@@ -150,11 +150,11 @@ public class ConverterUI extends JFrame{
 				try {
 					Unit unit1 = (Unit) unit1ComboBox.getSelectedItem();
 					Unit unit2 = (Unit) unit2ComboBox.getSelectedItem();
-					if ( inputField2.isEditable() == false || inputField1.hasFocus()  ){
+					if (  inputField1.hasFocus() || unit2ComboBox.hasFocus() || convertButton.hasFocus() ){
 						double value = Double.valueOf(s);
 						inputField2.setText(String.format("%.10g",unitconverter.convert(value,unit1,unit2)));
 					}
-					else if ( inputField1.isEditable() == false || inputField2.hasFocus() ) {
+					else if (  inputField2.hasFocus() || unit1ComboBox.hasFocus() ||convertButton.hasFocus() ) {
 						double value = Double.valueOf(s2);
 						inputField1.setText(String.format("%.10g",unitconverter.convert(value,unit2,unit1)));
 					}
